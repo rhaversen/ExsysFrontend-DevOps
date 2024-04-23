@@ -28,7 +28,7 @@ spec:
                       requests:
                           cpu: "0.2"
                           memory: "256Mi"
-                  image: "rhaversen/exsys-frontend:${GITHUB_SHA}"
+                  image: "rhaversen/exsys-frontend:0e9ed10a823bc862d6fa07c18e03900056965d57"
                   imagePullPolicy: Always
                   livenessProbe:
                       httpGet:
