@@ -23,12 +23,12 @@ spec:
                 - name: frontend-deployment
                   resources:
                       limits:
-                          cpu: "0.2"
-                          memory: "256Mi"
+                          cpu: "0.05"
+                          memory: "500Mi"
                       requests:
-                          cpu: "0.1"
-                          memory: "125Mi"
-                  image: "rhaversen/exsys-frontend:40d9986a59e9afc6b95b5f1aed590412a4612a58"
+                          cpu: "0.01"
+                          memory: "25Mi"
+                  image: "rhaversen/exsys-frontend:4d8f9ac6aa5915e676bbd0c1495e99d5140586bf"
                   imagePullPolicy: Always
                   livenessProbe:
                       httpGet:
