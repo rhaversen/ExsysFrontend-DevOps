@@ -4,7 +4,7 @@ metadata:
     name: frontend-deployment
     namespace: exsys-production
 spec:
-    replicas: 3
+    replicas: 2
     strategy:
         type: RollingUpdate
         rollingUpdate:
@@ -23,12 +23,12 @@ spec:
                 - name: frontend-deployment
                   resources:
                       limits:
-                          cpu: "0.5"
-                          memory: "512Mi"
+                          cpu: "0.1"
+                          memory: "100Mi"
                       requests:
-                          cpu: "0.2"
-                          memory: "256Mi"
-                  image: "rhaversen/exsys-frontend:663007d0feb671f858ca7ef730e2d9c7ec6ea525"
+                          cpu: "0.05"
+                          memory: "50Mi"
+                  image: "rhaversen/exsys-frontend:e9b8e338edc87691b936cc0c1f60f21cd3496195"
                   imagePullPolicy: Always
                   livenessProbe:
                       httpGet:
