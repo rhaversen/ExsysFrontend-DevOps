@@ -20,32 +20,32 @@ spec:
         spec:
             automountServiceAccountToken: false
             containers:
-                - name: frontend-deployment
-                  resources:
-                      limits:
-                          cpu: "400m"
-                          memory: "300M"
-                      requests:
-                          cpu: "250m"
-                          memory: "200M"
-                  image: "rhaversen/exsys-frontend:d7a096983d67c20995370bbb7229a2272bf0cb39"
-                  imagePullPolicy: Always
-                  livenessProbe:
-                      httpGet:
-                          path: service/livez
-                          port: 3000
-                      periodSeconds: 10
-                      initialDelaySeconds: 15
-                      failureThreshold: 5
-                  readinessProbe:
-                      httpGet:
-                          path: service/readyz
-                          port: 3000
-                      periodSeconds: 10
-                      initialDelaySeconds: 15
-                      failureThreshold: 5
-                  ports:
-                      - containerPort: 5000
-                  envFrom:
-                      - secretRef:
-                            name: frontend-secrets
+                -   name: frontend-deployment
+                    resources:
+                        limits:
+                            cpu: "400m"
+                            memory: "300M"
+                        requests:
+                            cpu: "250m"
+                            memory: "200M"
+                    image: "rhaversen/exsys-frontend:91f0f546d601661e234e34b9fe778a18b29a6df1"
+                    imagePullPolicy: Always
+                    livenessProbe:
+                        httpGet:
+                            path: service/livez
+                            port: 3000
+                        periodSeconds: 10
+                        initialDelaySeconds: 15
+                        failureThreshold: 5
+                    readinessProbe:
+                        httpGet:
+                            path: service/readyz
+                            port: 3000
+                        periodSeconds: 10
+                        initialDelaySeconds: 15
+                        failureThreshold: 5
+                    ports:
+                        -   containerPort: 5000
+                    envFrom:
+                        -   secretRef:
+                                name: frontend-secrets
