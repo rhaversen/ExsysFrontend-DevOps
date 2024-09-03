@@ -28,7 +28,7 @@ spec:
                         requests:
                             cpu: "250m"
                             memory: "200M"
-                    image: "rhaversen/exsys-frontend:c7df84fc4b12d3885d7424ef3adeed17e91d8d16"
+                    image: "rhaversen/exsys-frontend:8dd8b0280ed493f8787a22466b2f1bb65bafefb8"
                     imagePullPolicy: Always
                     livenessProbe:
                         httpGet:
