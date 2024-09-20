@@ -9,10 +9,10 @@ spec:
     ingressClassName: nginx
     tls:
         -   hosts:
-                - raindate.net
+                - kantine.nyskivehus.dk
             secretName: frontend-tls
     rules:
-        -   host: raindate.net
+        -   host: kantine.nyskivehus.dk
             http:
                 paths:
                     -   backend:
